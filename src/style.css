@@ -1,0 +1,136 @@
+:root {
+  /* Default Colors */
+  --background-color: #faf9f6;
+  --hover-color: #3300cc;
+  --black-color: #28282b;
+  --white-color: #fbfcfc;
+
+  /* Default Size Margin & Padding */
+  --base-padding: 2rem;
+  --base-margin: 2rem;
+
+  /* Default Font Size */
+  --main-font-size: 3.2rem;
+  --sub-font-size: 1.6rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+/* Start Header */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  color: var(--white-color);
+}
+
+header .home-tag {
+  width: 40%;
+  margin: 0 calc(var(--base-margin) * 2);
+  font-size: var(--main-font-size);
+  color: var(--black-color);
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav a {
+  margin: var(--base-margin);
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+header nav a:hover {
+  transform: scale(1.2);
+  color: var(--hover-color);
+}
+
+/* End of Header */
+
+/* Start Main Page*/
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+.main-container section {
+  height: 100vh;
+}
+
+.main-container .profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container .profile-text {
+  height: 5rem;
+  margin: calc(var(--base-margin) * 2);
+}
+
+.profile-text span {
+  font-size: var(--main-font-size);
+}
+
+.profile-container .profile-image {
+  width: 40rem;
+  height: 40rem;
+  background-color: var(--white-color);
+  border-radius: 50%;
+}
+
+.profile-image img {
+  position: relative;
+  left: 5rem;
+  top: 5rem;
+  width: 30rem;
+  height: 30rem;
+  animation: up-down 1.4s infinite ease-in-out alternate;
+}
+
+@keyframes up-down {
+  from {
+    transform: translatey(1rem);
+  }
+  to {
+    transform: translatey(-1rem);
+  }
+}
+
+.profile-container .profile-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  height: 10rem;
+  margin: calc(var(--base-margin) * 2);
+}
+
+.profile-links img {
+  width: var(--main-font-size);
+  height: var(--main-font-size);
+  margin: var(--base-margin);
+  cursor: pointer;
+}
