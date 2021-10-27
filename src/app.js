@@ -4,6 +4,7 @@ const $submitButton = document.querySelector(".guest-button");
 const $firstMessage = document.querySelector(".guest-message");
 
 const $contentsContainer = document.querySelector(".about-contents");
+const $selfContainer = document.querySelector(".about-self");
 const $guestName = document.querySelector(".guest-name");
 
 const CSS_PROPERTIES = {
@@ -19,8 +20,12 @@ function handleClickSubmit() {
 
   if (confirmWindow) {
     $guestInformation.classList.add(CSS_PROPERTIES.disappear);
-    $guestName.classList.remove(CSS_PROPERTIES.hidden);
-    $guestName.textContent = `${guestName}님 만나서 반가워요. 👋`;
+    $selfContainer.classList.remove(CSS_PROPERTIES.hidden);
+    $guestName.innerHTML = `
+    <span class="half-highlight">
+    ${guestName} </span>
+    님 만나서 반가워요. 👋
+    `;
   } else {
     $firstMessage.textContent = "이름을 다시 입력해주세요.🤔";
   }
