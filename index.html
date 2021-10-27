@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Quicksand&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/style.css" />
@@ -17,37 +17,62 @@
     <header>
       <a class="home-tag" href="#">HAESOO</a>
       <nav>
-        <a>About</a>
-        <a>Mini Projects</a>
-        <a>Contact</a>
+        <a href="#about">About</a>
+        <a href="miniProjects">Mini Projects</a>
+        <a href="contact">Contact</a>
       </nav>
     </header>
     <main class="main-container">
       <section class="profile-container">
         <div class="profile-text">
-          <span>Hi I'm Haesoo</span>
+          <span>안녕하세요, 저는 정해수입니다. </span>
           <span class="shake-hands">👋</span>
         </div>
         <div class="profile-image">
           <img src="./src/image/profile.png" alt="Profile image" />
         </div>
         <div class="profile-links">
-          <a href="https://github.com/wjdgotn77" class="link-icon">
+          <a
+            href="https://github.com/wjdgotn77"
+            class="link-icon"
+            title="GitHub"
+          >
             <img src="./src/image/github.png" alt="Visit the github page"
           /></a>
-          <a href="https://velog.io/@haesoohaesoo" class="link-icon">
+          <a
+            href="https://velog.io/@haesoohaesoo"
+            class="link-icon"
+            title="Velog"
+          >
             <img src="./src/image/vimeo.png" alt="Visit the Velog page"
           /></a>
-          <a class="link-icon">
+          <a class="link-icon" title="E-Mail">
             <img src="./src/image/email.png" alt="Send the E-Mail"
           /></a>
         </div>
       </section>
-      <section class="about-container">contents</section>
+      <section id="about" class="about-container">
+        <div class="about-guest">
+          <p class="guest-message about-guest__message">
+            지금부터 제가
+            <span class="half-highlight">좋아하는 것</span>들을 소개할게요.
+            <br />
+            이름을 입력하시면, 숨겨진 페이지가 나타납니다.
+          </p>
+          <input type="text" class="guest-input about-guest__input" />
+          <button type="button" class="guest-button about-guest__button">
+            click
+          </button>
+        </div>
+        <div class="about-contents">
+          <h1 class="guest-name about-contents__name hidden"></h1>
+        </div>
+      </section>
       <section class="miniweb-container">contents</section>
     </main>
     <footer>
       <span> code by haesoo</span>
     </footer>
+    <script src="./src/app.js"></script>
   </body>
 </html>
