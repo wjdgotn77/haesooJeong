@@ -222,17 +222,38 @@ header nav a:hover {
   height: inherit;
 }
 
-.about-contents__name {
-  color: var(--gray-color);
+.about-self {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+
+.about-self__name,
+.about-self__title {
+  width: inherit;
+  padding: var(--base-padding) calc(var(--base-padding) * 2);
+  color: var(--black-color);
+  line-height: 4.5rem;
   font-size: var(--main-font-size);
+  font-family: var(--kr-font-dohyeon);
+  font-weight: 600;
+}
+
+.about-self__contents {
+  font-size: calc(var(--sub-font-size) * 2);
+  color: var(--gray-color);
+  margin: var(--base-margin) 0;
 }
 
 .hidden {
   visibility: hidden;
+  height: 0vh;
 }
 
 .disappear {
-  animation: fade-out 1s;
+  animation: fade-out 0.8s;
   animation-fill-mode: forwards;
 }
 
