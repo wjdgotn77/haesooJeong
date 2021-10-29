@@ -267,3 +267,12 @@ header nav a:hover {
     height: 0vh;
   }
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: 5rem;
+  font-size: calc(var(--sub-font-size) * 1.2);
+}
