@@ -247,9 +247,34 @@ header nav a:hover {
   margin: var(--base-margin) 0;
 }
 
+.popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black-color);
+}
+
 .hidden {
   visibility: hidden;
   height: 0vh;
+}
+
+.appear {
+  animation: fade-in 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    height: 0vh;
+  }
+  to {
+    opacity: 1;
+    height: 100%;
+  }
 }
 
 .disappear {
