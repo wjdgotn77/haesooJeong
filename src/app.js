@@ -24,9 +24,12 @@ $nameInput.addEventListener("keyup", (e) => {
   }
 });
 miniwebBtn.addEventListener("click", handleClickPopup);
-closeBtn.addEventListener("click", () => {
-  miniwebPopup.classList.add(CSS_PROPERTIES.disappear);
-});
+closeBtn.addEventListener("click", handleClickPopup);
+
+function handleClickPopup() {
+  miniwebPopup.classList.toggle(CSS_PROPERTIES.hidden);
+  miniwebPopup.classList.toggle(CSS_PROPERTIES.appear);
+}
 
 function handleClickSubmit() {
   const guestName = $nameInput.value;
@@ -49,9 +52,4 @@ function handleClickSubmit() {
       $firstMessage.textContent = "이름을 다시 입력해주세요.🤔";
     }
   }
-}
-
-function handleClickPopup() {
-  miniwebPopup.classList.remove(CSS_PROPERTIES.hidden);
-  miniwebPopup.classList.add(CSS_PROPERTIES.appear);
 }
