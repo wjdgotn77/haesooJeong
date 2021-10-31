@@ -7,9 +7,14 @@ const $contentsContainer = document.querySelector(".about-contents");
 const $selfContainer = document.querySelector(".about-self");
 const $guestName = document.querySelector(".guest-name");
 
+const miniwebBtn = document.querySelector(".popup-button");
+const miniwebPopup = document.querySelector(".miniweb-container");
+const closeBtn = document.querySelector(".close-button");
+
 const CSS_PROPERTIES = {
   hidden: "hidden",
   disappear: "disappear",
+  appear: "appear",
 };
 
 $submitButton.addEventListener("click", handleClickSubmit);
@@ -17,6 +22,10 @@ $nameInput.addEventListener("keyup", (e) => {
   if (e.keyCode === 13) {
     handleClickSubmit();
   }
+});
+miniwebBtn.addEventListener("click", handleClickPopup);
+closeBtn.addEventListener("click", () => {
+  miniwebPopup.classList.add(CSS_PROPERTIES.disappear);
 });
 
 function handleClickSubmit() {
@@ -39,4 +48,9 @@ function handleClickSubmit() {
       $firstMessage.textContent = "이름을 다시 입력해주세요.🤔";
     }
   }
+}
+
+function handleClickPopup() {
+  miniwebPopup.classList.remove(CSS_PROPERTIES.hidden);
+  miniwebPopup.classList.add(CSS_PROPERTIES.appear);
 }
