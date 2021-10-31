@@ -39,6 +39,7 @@ function handleClickSubmit() {
     if (confirmWindow) {
       $guestInformation.classList.add(CSS_PROPERTIES.disappear);
       $selfContainer.classList.remove(CSS_PROPERTIES.hidden);
+      $selfContainer.classList.add(CSS_PROPERTIES.appear);
       $guestName.innerHTML = `
       <span class="half-highlight">
       " ${guestName} "</span>
