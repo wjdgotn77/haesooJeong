@@ -267,7 +267,7 @@ header nav a:hover {
   color: var(--white-color);
 }
 
-.miniweb h1 {
+.miniweb a {
   margin: var(--base-margin);
   color: var(--white-color);
   font-weight: 400;
